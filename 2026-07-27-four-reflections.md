@@ -1,4 +1,4 @@
-# Three reflections
+# Four reflections
 
 *Todd Youngblood, Ventures and Operations Steward, RegenHub, LCA. Dictated 2026-07-27, eighteen days before the launch gathering. Transcribed and lightly edited: dictation artifacts repaired, phrasing kept. Drafts, open to correction.*
 
@@ -49,3 +49,17 @@ That absence is what casts Techne as a possible third space, distinct from tradi
 I picture four people. A student who wants to practice, or simply to play with new ideas. Someone between jobs who wants to stay relevant, to learn, or to teach and help educate. A mid-career professional who was laid off and is seeking to transition to another kind of work, but who is not yet contemplating retirement. And someone at retirement age, for whom this could be a meaningful interface to pass down their practice, their wisdom, and their inherited knowledge, through the distinct lens of their identity, their generation, and their history.
 
 None of those four is well served by a firm. All four have something to give and something to gain from a place organized around practice rather than employment. If Techne is a soil, these are the people who tend it, and the question of ownership of work is really the question of whether the record can hold what each of them brings.
+
+---
+
+## IV. Why Colorado
+
+*3:18 PM*
+
+A consideration of place, and of why the birthplace is not incidental.
+
+Colorado is a legislative and policy frontier among the United States, specifically in economic and cooperative law. It is not alone in this. It has siblings: Wyoming in the law of decentralized autonomous organizations, South Dakota in trust law. States that decided, deliberately, to be the place where a new kind of entity could first be legal. Colorado made that decision about cooperatives, and that is what makes it a distinctive birthplace for Techne.
+
+What the Limited Cooperative Association gives us specifically is a container that can hold a right relationship with investor members. Not a form that refuses capital, and not a form that is captured by it. A form in which capital can be a member with a real stake and a real voice, while the people doing the work keep the majority of what the work produces.
+
+That is the whole proposition, and it is why the container matters as much as the intention: it lets Techne be a meaningful commons that can partner with capital without becoming dependent on it. Most forms make you choose. This one asks you to hold both, and then writes down which one comes first.
