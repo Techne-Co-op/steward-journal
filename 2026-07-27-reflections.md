@@ -1,4 +1,4 @@
-# Five reflections
+# Six reflections
 
 *Todd Youngblood, Ventures and Operations Steward, RegenHub, LCA. Dictated 2026-07-27, eighteen days before the launch gathering. Transcribed and lightly edited: dictation artifacts repaired, phrasing kept. Drafts, open to correction.*
 
@@ -85,3 +85,23 @@ The financial half is where I must be exact. The outcome named first, comprehens
 So the three emphases stand where they stand. Legibility of the entity is delivered. Recognition of the work completed thus far is built and waiting on the board to adopt the rules that would compute it. Access to capital is specified and sequenced last. And the sponsorship that started this concludes at roughly the moment the cooperative launches, which makes the fourth thing Kevin asked for, continuity, a live question rather than a distant one.
 
 There is a personal edge to the middle one that I will name rather than hide. The part of the system that would recognize contribution, including my own, is precisely the part still waiting on a board act. That is the right order. A cooperative that computed its steward's recognition before adopting the rules that govern it would have proven exactly the wrong thing about itself.
+
+---
+
+## VI. What computing was for
+
+*4:17 PM*
+
+This is the consideration I have held longest, most of a year now, and it is the one underneath all the others.
+
+Computing and information technology were conceived as a tool for humanity to address its most pressing challenges collectively: through the sharing of knowledge and information, and through the building of systems. That was the founding intention of the field, and it is worth saying that it was an intention, held by people, and not an inevitability.
+
+What happened instead is drift, and then capture. Corporate structures took up these tools and pointed them at profit maximization, and in doing so the field lost its soul. I do not think that word is too strong. A tool imagined for collective coordination became an instrument of extraction and enclosure, and we have spent a first century of computing living inside the consequences of that turn.
+
+Our own formation conversation reached this in January, days before we filed. The observation in the room was that the first century of computing was shaped by the corporate co-option of tools first imagined for collective coordination, and that alongside a housing right there is an information right. We filed a week later. I have not stopped thinking that the two facts belong together.
+
+What is different now is that in the era of AI and collective intelligence we can actually build the thing. Real cybernetic systems, and real cybernetic organizations: entities that sense their own condition, that respond, that are accountable to the people inside them. Organizations in a position to transform corporate structures into responsive human entities, capable of addressing systemic risks and harms rather than generating them.
+
+This is why the first principle of the system I am presenting is that it exists to augment human coordination and not to replace human judgment. Agents draft, surface, and guide; people decide, sign, and govern. That is not a safety disclaimer. It is the whole argument of this reflection, written where it has to be written to mean anything, which is into the design.
+
+And it suggests a different theory of how change happens. Not systemically forced, imposed from above on populations who did not ask for it, but locally organic: grown in particular places by particular people who can see what they are participating in. A cooperative in Boulder is a small instance of that. It is also, as far as I can tell, the only kind that has ever worked.
