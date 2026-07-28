@@ -55,24 +55,65 @@ SOURCES = {
              ("Counting rules", f"{T}/commons/patronage/counting-rules/", "HOURS excludes play")],
 }
 
-# Raw dictation, recovered verbatim from the session transcripts. Unpunctuated,
-# unrepaired. Two were truncated by WhatsApp when the batch was forwarded.
-DICTATION = {
-    "I": ("1:42 PM", False, """I would like to record another voice note that enables me to articulate and contextualize more considerations for my role as the LCA Steward supporting ventures and operations at regen hub and techni so this consideration is that of what techna co-op could be as a soil and substrate for art for craft and for science as a cooperative that is distinct from a corporation which treats the work the craft and the outputs of Labor as merely commerce and not craft and thereby the bases the work the labor from an elevated form to a base form I believe that this container is unique as many incubators and accelerators for founders treat the founders work as an opportunity for commerce and profit which defines the end goal in north star of that work rather than craft where craft returns what some might call sacred relationship to the work that enables it to become what it could and should be in its highest purpose and not a lower or more base purpose which is commerce profit and Gain"""),
-    "II": ("1:51 PM", False, """I want to record yet another voice note that continues to enable me to document and articulate my thoughts and reflections as the steward of the co-op for record-keeping purposes so the consideration now is the moment we find ourselves in I believe that the ancient Greeks had another language and terminology for this but I think it was Kairos where the moment needs to be considered for the right action and I think in 2026 in the state of AI especially in July 2026 we find ourselves at a time where knowledge workers and the sector of the economy that is dependent on their knowledge and intellectual capacities for labor find themselves at risk and now in 2026 offers us the opportunity very few populations are offered in their time which is a fundamental shift that could enable the cooperative and common control and operation of the means of production where in this articulation ai-enables a transition opportunity where digital infrastructure becomes a public good and balances the current over concentration of privately controlled platforms offering a more plural ecosystem that doesn't lock in participants and guests of the world wide Web so this point in time I consider Kairos as a moment speaking to us to embrace the means of production and to embrace the work that is ahead of us in governing and collectively benefiting from Commons of digital infrastructure held by a decentralized network of cooperatives organized and self-organized according to art craft and science each has intersectional fields"""),
-    "III": ("2:04 PM", False, """this next voice note articulates a consideration of ownership of work similar and maybe complementary to previous voice note about the basing of Labor and craft by the corporate form this consideration also recognizes the corporate form and the inability of traditional firms to honor work as craft and honor the worker as a crafts person an artist or a scientist dependent on the field and this consideration casts Technic co-op as potentially a third space distinct from traditional corporate work where a number of populations and identities could find meaningful engagement within techni whether you're a student wanting to practice or play with new ideas maybe someone who's in between jobs who wants to stay relevant wants to learn or wants to teach or help educate or maybe your a mid-age professional who was laid off and is seeking to transition to another type of work but not yet considering retirement I think Technic could also be attracted to a retirement age class of population where it provides them a meaningful interface to pass down their practice their wisdom their inherited knowledge through the distinct lens of their identity and generation and history"""),
-    "IV": ("3:18 PM", False, """this is yet another voice note and consideration I hold as Steward of the LCA this consideration is that of place and why I think Colorado is a legislative and policy frontier among the United States specifically in economic and cooperative law and it exists among siblings with it Wyoming in DAO law and South Dakota in trust law that makes Colorado a unique birthplace of the Technic co-op I think the LCA as a container that can build a right relationship with her invest members enables technique to be a meaningful Commons that can partner with capital but not be dependent on it"""),
-    "V": ("3:26 PM", False, """for my next voice note and reflection I wanted to share about the job description and role responsibilities including scope of work that informed the title of ventures and operations Steward that emerged from my conversation with Kevin I will attach a statement of work following this voice note and I want to intersect the statement of work as developed in February and the feedback received mid workflow this summer to set context and background for the information system I present on launch day also called The Commons the role and scope emphasized legibility of The entity recognition of the work completed thus far and access to Capital all of which the common information system or the CIS as proposed on techne.coop/commons provides a road map for"""),
-    "VI": ("4:17 PM", False, """want to share yet another voice note that is a long consideration of mine for the past year and that is the lineage of computing and information technology and how it has been drifted and captured by corporate structures for profit maximization and has lost its soul which was primarily conceptualized as a tool enabling humanity to address its most pressing challenges collectively through knowledge information sharing and systems building I think in the time of the eye ai and collective intelligence we have the ability to build real cybernetic systems and organizations that in a plus to transform corporate structures into responsive human and disease that address systemic risks harms and enables us to adopt a more humanist and mindful approach to change that is not systemically forced but rather locally organic"""),
-    "VII": ("4:23 PM", True, """I want to share yet another voice note to articulate and communicate something that I know was identified in one of our early formation meetings but that is the errand value proposition of modern corporations as perceived through the resources events and agents language where modern corporations are primarily driven by shareholder primacy and reported on according to financial statements which serve as lagging indicators of value creation and Rea system inheriting cybernetic principles would enable first order value creation information and aggregation within the organization where traditional corporations rely on financial statements which are second order and byproducts of the first order value creative activities that would be notated in an activity journal and enables the more automated and auditable second order report generation as a secondary activity"""),
-    "VIII": ("8:32 PM", True, """I'd like to articulate yet another voice note that considers the current limitations of human computer interaction and the opportunity of large models to enable a more natural language interface with a more robust feature set I think that natural language systems replacing or augmenting graphical user interfaces could enable more mass access to distinct and diverse types of compute and information services that would have otherwise through a GUI then inaccessible or potentially incomprehensible I propose that natural language interfaces either direct or agent mediated could be a key opportunity and value proposition for technique cooperative in the spirit of Wikipedia and Craigslist as information services infrastructure I want to open the question to the co"""),
-    "IX": ("8:34 PM", False, """another voice note I find myself often considering a grandmother of computing Grace Hopper and her conceptualization of systems of computers and her articulation during a speech which has been recorded by a US military group but released publicly in which she talked about how systems of computers could be used to understand things like water shortages especially along and in the west and Colorado River"""),
-    "X": ("8:46 PM", False, """another voice note reflecting on my role as Steward and the potential importance of play as we begin to define new systems for individual and collective self organizing I think play is a pre-requisite to cycles of feedback and learning important for growth and how a digital environment and supportive infrastructure could create the opportunity for play and practice across arts crafts and sciences"""),
-}
+# Light editorial pass over the published prose. Every change is here and nowhere
+# else, so the diff against the published page is always exactly this list.
+# (entry, exact substring in the published text) -> replacement, plus the reason.
+EDITS = [
+    ("II", "In 2026, and particularly in the state of AI in July of 2026,",
+     "In 2026, and particularly in the state of AI this July,",
+     "the year lands twice in one sentence"),
+    ("II", "the participants and guests of the World Wide Web.",
+     "the participants and guests of the web.",
+     "the full formal name reads dated; the construction is kept"),
+    ("III", "That absence is what casts Techne as a possible third space,",
+     "That absence is what makes Techne possible as a third space,",
+     "a cleaner verb for the same claim"),
+    ("III", "a meaningful interface to pass down their practice",
+     "a meaningful way to pass down their practice",
+     "the only piece of jargon in the warmest paragraph in the piece"),
+    ("IV", "gives us specifically is a container",
+     "gives us is a container",
+     "filler"),
+    ("V", "should be unprioritized where they detract",
+     "should be set aside where they detract",
+     "plainer than the coinage, and this is a paraphrase rather than a quotation"),
+    ("V", "than dress it.", "than dress it up.", "the idiom"),
+    ("VI", "a first century of computing", "the first century of computing",
+     "a specific century, not one of several"),
+    ("VII", "The work happened, and then months later a statement describes its shadow",
+     "The work happens, and months later a statement describes its shadow",
+     "tense agreement, and one fewer beat"),
+    ("VII", "That is also, incidentally, the honest answer to Goodhart,",
+     "That is also the honest answer to Goodhart,",
+     "the hedge undercuts the strongest claim in the entry"),
+    ("IX", "And then Colorado: the eastern half",
+     "</p><p>And then Colorado: the eastern half",
+     "a paragraph break, so Colorado lands as its own beat rather than "
+     "the fifth item in a list"),
+]
 
-NOTE_V = ("This one diverged furthest. The dictation names the two role documents and the "
-          "three emphases; the reflection above was rewritten on 2026-07-28 after the May "
-          "board thread arrived, and it now carries material the voice note never did.")
+
+def apply_edits(entries):
+    """Apply the editorial pass, and fail loudly if a target has moved."""
+    applied = []
+    for num, old, new, why in EDITS:
+        hits = 0
+        for i, (is_close, txt) in enumerate(entries[num]["paras"]):
+            if old in txt:
+                entries[num]["paras"][i] = (is_close, txt.replace(old, new))
+                hits += 1
+        if hits != 1:
+            raise SystemExit(f"edit for {num} matched {hits} paragraphs: {old[:60]!r}")
+        applied.append((num, old, new, why))
+    # a paragraph split arrives as inline markup; re-parse so counts stay honest
+    for e in entries.values():
+        rebuilt = []
+        for is_close, txt in e["paras"]:
+            parts = txt.split("</p><p>")
+            for j, part in enumerate(parts):
+                rebuilt.append((is_close and j == len(parts) - 1, part))
+        e["paras"] = rebuilt
+    return applied
 
 
 def parse_entries(src_html):
@@ -173,7 +214,12 @@ CSS = """
   details.dict[open] summary::before{content:"\\2212\\00a0"}
   details.dict summary:hover{color:var(--heading)}
   details.dict .raw{padding:2px 16px 16px; font:400 13.5px/1.85 var(--mono); color:var(--muted); white-space:pre-wrap}
-  details.dict .trunc{display:block; margin-top:10px; font:400 12px/1.6 var(--serif); font-style:italic; color:var(--faint)}
+  details.dict .ed{margin-bottom:14px; font:400 12px/1.7 var(--mono)}
+  details.dict .ed b{color:var(--ember-text); font-weight:500; display:inline-block; min-width:38px}
+  details.dict .ed span{display:block; margin-left:38px}
+  details.dict .ed .was{color:var(--faint); text-decoration:line-through}
+  details.dict .ed .now{color:var(--text)}
+  details.dict .ed .why{font-family:var(--serif); font-style:italic; color:var(--muted); margin-top:3px}
 
   footer{margin-top:72px; padding-top:18px; border-top:1px solid var(--line); font:400 11.5px/1.85 var(--mono); color:var(--faint)}
   footer .note{display:block; margin-top:8px; font-family:var(--serif); font-size:13px; line-height:1.7; letter-spacing:0}
@@ -227,12 +273,12 @@ HEAD_BOOT = """<script>
 DRAFTBAR = """<div class="draftbar">
   <b>Draft.</b> A reorganization of the July 27 reflections, unlinked from anywhere and
   carrying noindex. The published version stands unchanged at
-  <a href="../../">the journal root</a>. Nothing here is adopted, and the prose is
-  identical to the published text: only the apparatus around it is new.
+  <a href="../../">the journal root</a>. Nothing here is adopted. The prose carries a
+  light editorial pass, listed in full at the foot of the page.
 </div>"""
 
 
-def build_day(entries, order):
+def build_day(entries, order, edits):
     p = []
     a = p.append
     a('<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">')
@@ -306,17 +352,6 @@ def build_day(entries, order):
               'than about the record, and it stands on its own argument.</p>')
         a('  </div>')
 
-        when, truncated, raw = DICTATION[n]
-        a('  <details class="dict">')
-        a(f'    <summary>the dictation, unrepaired &middot; {when}</summary>')
-        a(f'    <div class="raw">{html.escape(raw)}')
-        if truncated:
-            a('      <span class="trunc">The forwarded transcript cut off here. The '
-              'original voice note ran longer.</span>')
-        if n == "V":
-            a(f'      <span class="trunc">{html.escape(NOTE_V)}</span>')
-        a('    </div>')
-        a('  </details>')
         a('</article>')
 
     a('\n<footer>')
@@ -327,11 +362,19 @@ def build_day(entries, order):
       'documents live in <a href="https://techne.coop/commons/">the Commonplace Book</a>. '
       'This page is unlisted and carries noindex; it is shared by link, for reading and '
       'for correction.</span>')
-    a('  <span class="fix"><b>Found something wrong?</b> Every reflection above opens to '
-      'the dictation it came from, so you can check the edit against the words. '
-      'Corrections, disagreements, and objections go to the steward directly, or to '
+    a('  <span class="fix"><b>Found something wrong?</b> Corrections, disagreements, and '
+      'objections go to the steward directly, or to '
       '<a href="https://github.com/Techne-Co-op/steward-journal/issues">the journal\'s '
       'issues</a>. A correction here is a new entry, never a silent edit.</span>')
+    a('  <details class="dict" style="margin-top:16px">')
+    a(f'    <summary>editorial changes from the published text &middot; {len(edits)}</summary>')
+    a('    <div class="raw">')
+    for num, old, new, why in edits:
+        a(f'      <div class="ed"><b>{num}</b> <span class="was">{html.escape(old.replace("</p><p>", " "))}</span>'
+          f'<span class="now">{html.escape(new.replace("</p><p>", " ¶ "))}</span>'
+          f'<span class="why">{html.escape(why)}</span></div>')
+    a('    </div>')
+    a('  </details>')
     a('</footer>')
     a(f'\n</div>\n<script>{MODE_JS}</script>\n</body>\n</html>')
     return "\n".join(p)
@@ -396,11 +439,12 @@ def build_index(entries, order):
 def main():
     src = SRC.read_text()
     entries, order = parse_entries(src)
+    edits = apply_edits(entries)
     assert len(entries) == 10, f"expected 10 entries, parsed {len(entries)}"
     (HERE / "2026-07-27").mkdir(exist_ok=True)
-    (HERE / "2026-07-27" / "index.html").write_text(build_day(entries, order))
+    (HERE / "2026-07-27" / "index.html").write_text(build_day(entries, order, edits))
     (HERE / "index.html").write_text(build_index(entries, order))
-    print(f"built {len(entries)} entries, {sum(words(entries[n]) for n in order):,} words")
+    print(f"built {len(entries)} entries, {sum(words(entries[n]) for n in order):,} words, {len(edits)} edits")
 
 
 if __name__ == "__main__":
