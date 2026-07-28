@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark light">
+<title>The Steward's Journal &middot; RegenHub, LCA</title>
+<meta name="description" content="Dated reflections by the Ventures and Operations Steward of RegenHub, LCA.">
+<meta name="robots" content="noindex,nofollow">
+<script>
+  (function(){var s=null;try{s=localStorage.getItem('techne-mode');}catch(e){}
+  var m=s||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');
+  document.documentElement.setAttribute('data-mode',m)})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#C4A96A; --amber:#C4956A; --coral:#C47A6A; --rose:#B46A8A; --violet:#8A76B4; --twilight:#6A8AC4;
+    --serif:'Libre Baskerville',Georgia,serif; --mono:'IBM Plex Mono','SFMono-Regular',Consolas,monospace;
+  }
+  [data-mode="dark"]{
+    --bg:#0F0F12; --surface:#16161B; --line:#2A2A30; --rule:#3A3A42;
+    --heading:#E8E4DF; --text:#CFCBC4; --muted:#8A857E; --faint:#5A554F;
+    --ember-text:#D4A57A; --blue-text:#97B5E8;
+  }
+  [data-mode="light"]{
+    --bg:#F7F5F0; --surface:#FCFBF8; --line:#D8D3C8; --rule:#9A958A;
+    --heading:#1A1A1F; --text:#2E2C28; --muted:#646058; --faint:#A39E92;
+    --ember-text:#6F5436; --blue-text:#39588F;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{background:var(--bg); color:var(--text); font:400 17px/1.75 var(--serif); -webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px; margin:0 auto; padding:0 24px 96px}
+  a{color:var(--blue-text); text-decoration:none}
+  a:hover{text-decoration:underline}
+  em{color:var(--heading); font-style:italic}
+  :focus-visible{outline:2px solid var(--blue-text); outline-offset:2px}
+
+  .topbar{display:flex; justify-content:space-between; align-items:center; padding:16px 0 12px; border-bottom:1px solid var(--line)}
+  .topbar .bc{font:400 11.5px var(--mono); color:var(--muted)}
+  .mode-btn{font:400 11.5px var(--mono); color:var(--muted); background:var(--surface); border:1px solid var(--line); border-radius:2px; padding:4px 10px; cursor:pointer}
+  .mode-btn:hover{color:var(--heading)}
+
+  .draftbar{margin-top:14px; border:1px solid var(--rule); border-left:2px solid var(--ember-text); background:var(--surface); padding:12px 16px; font:400 12.5px/1.7 var(--mono); color:var(--muted)}
+  .draftbar b{color:var(--ember-text); font-weight:500}
+
+  .mast{padding:56px 0 36px; border-bottom:1px solid var(--rule)}
+  .mast .kicker{font:500 11px var(--mono); color:var(--ember-text); letter-spacing:.14em; text-transform:uppercase}
+  .mast h1{font:400 clamp(32px,5vw,44px)/1.15 var(--serif); color:var(--heading); margin:14px 0 16px}
+  .mast .prov{font:400 13.5px/1.7 var(--serif); font-style:italic; color:var(--muted); max-width:58ch}
+  .mast .meta{margin-top:16px; font:400 11px var(--mono); color:var(--faint); letter-spacing:.06em}
+
+  /* dual reading order */
+  .orders{margin-top:32px}
+  .orders .lab{font:500 10.5px var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--faint); display:block; margin-bottom:12px}
+  .grp{margin-bottom:20px; padding-left:14px; border-left:2px solid var(--line)}
+  .grp .gt{font:400 15px var(--serif); color:var(--heading); display:block}
+  .grp .gd{font:400 12.5px/1.6 var(--serif); font-style:italic; color:var(--muted); display:block; margin:2px 0 8px}
+  .grp .gl{display:flex; flex-wrap:wrap; gap:14px; font:400 11.5px var(--mono)}
+  .grp .gl a{color:var(--muted); border-bottom:1px solid var(--line); padding-bottom:2px}
+  .grp .gl a:hover{color:var(--heading); text-decoration:none; border-color:var(--rule)}
+  .chrono{display:flex; flex-wrap:wrap; gap:10px 28px; font:400 11.5px var(--mono); margin-top:6px}
+  .chrono a{color:var(--muted)}
+  .chrono a:hover{color:var(--heading)}
+  .chrono .t{color:var(--faint)}
+
+  .entry{padding:56px 0 0}
+  .entry + .entry{margin-top:8px; border-top:1px solid var(--line)}
+  .entry .num{font:500 11px var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--tint,var(--ember-text))}
+  .entry h2{font:400 clamp(24px,3.4vw,30px)/1.25 var(--serif); color:var(--heading); margin:10px 0 8px}
+  .entry .dek{font:400 15px/1.6 var(--serif); font-style:italic; color:var(--muted); margin-bottom:12px; max-width:56ch}
+  .entry .when{font:400 11px var(--mono); color:var(--faint); letter-spacing:.08em; margin-bottom:26px; display:block}
+  .entry p{margin-bottom:20px}
+  .entry .close{border-left:2px solid var(--tint,var(--ember-text)); padding-left:18px; color:var(--heading)}
+
+  /* checkable claims */
+  .sources{margin-top:26px; padding-top:14px; border-top:1px solid var(--line)}
+  .sources .lab{font:500 10px var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--faint); display:block; margin-bottom:9px}
+  .sources ul{list-style:none}
+  .sources li{font:400 12.5px/1.7 var(--mono); margin-bottom:4px}
+  .sources li span{color:var(--faint)}
+  .sources .none{font:400 12.5px/1.7 var(--serif); font-style:italic; color:var(--faint)}
+
+  /* the first-order record */
+  details.dict{margin-top:16px; border:1px solid var(--line); border-radius:2px; background:var(--surface)}
+  details.dict summary{cursor:pointer; list-style:none; padding:10px 14px; font:400 11px var(--mono); letter-spacing:.08em; color:var(--muted)}
+  details.dict summary::-webkit-details-marker{display:none}
+  details.dict summary::before{content:"+\00a0"; color:var(--tint,var(--ember-text))}
+  details.dict[open] summary::before{content:"\2212\00a0"}
+  details.dict summary:hover{color:var(--heading)}
+  details.dict .raw{padding:2px 16px 16px; font:400 13.5px/1.85 var(--mono); color:var(--muted); white-space:pre-wrap}
+  details.dict .trunc{display:block; margin-top:10px; font:400 12px/1.6 var(--serif); font-style:italic; color:var(--faint)}
+
+  footer{margin-top:72px; padding-top:18px; border-top:1px solid var(--line); font:400 11.5px/1.85 var(--mono); color:var(--faint)}
+  footer .note{display:block; margin-top:8px; font-family:var(--serif); font-size:13px; line-height:1.7; letter-spacing:0}
+  footer .fix{display:block; margin-top:12px; padding:10px 14px; border:1px solid var(--line); background:var(--surface); font-family:var(--serif); font-size:13px; line-height:1.7; letter-spacing:0; color:var(--muted)}
+
+  /* index */
+  .day{padding:40px 0 0; border-top:1px solid var(--line); margin-top:8px}
+  .day .dt{font:500 11px var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--ember-text)}
+  .day h2{font:400 26px/1.25 var(--serif); color:var(--heading); margin:10px 0 8px}
+  .day h2 a{color:var(--heading)}
+  .day .dek{font:400 15px/1.6 var(--serif); font-style:italic; color:var(--muted); max-width:56ch}
+  .day .stat{margin-top:14px; font:400 11px var(--mono); color:var(--faint); letter-spacing:.06em}
+  .day .themes{margin-top:16px; font:400 12.5px/1.9 var(--mono); color:var(--muted)}
+  .day .themes b{color:var(--heading); font-weight:400}
+
+  @media print{
+    [data-mode]{--bg:#fff; --surface:#fff; --line:#ddd; --rule:#999; --heading:#000; --text:#222; --muted:#555; --faint:#777; --ember-text:#333; --blue-text:#222}
+    body{font-size:11pt}
+    .topbar,.mode-btn,.draftbar,.orders{display:none}
+    .entry{page-break-inside:avoid; padding-top:28px}
+    details.dict{display:none}
+    .sources li{font-size:9pt}
+    a{text-decoration:none}
+    a[href^="http"]::after{content:" (" attr(href) ")"; font-size:8pt; color:#666}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <span class="bc">RegenHub, LCA &middot; Boulder, Colorado</span>
+  <button class="mode-btn" id="modeBtn" aria-label="Toggle light and dark mode">dark</button>
+</div>
+<div class="draftbar">
+  <b>Draft.</b> This is the reorganization: an index with room for a second day, and the July 27 reflections moved underneath it. The published version, where the root page <em>is</em> the July 27 entry, stands unchanged at <a href="../">the journal root</a>.
+</div>
+
+<div class="mast">
+  <div class="kicker">A journal</div>
+  <h1>The steward's journal</h1>
+  <p class="prov">Todd Youngblood, Ventures and Operations Steward, RegenHub, LCA. Dictated notes, transcribed and lightly edited: the dictation repaired, the phrasing kept. Thinking, not record. Drafts, open to correction.</p>
+</div>
+
+<article class="day">
+  <div class="dt">July 27, 2026 &middot; eighteen days before the launch</div>
+  <h2><a href="2026-07-27/">Ten reflections</a></h2>
+  <p class="dek">Craft against commerce, the moment we are in, who a third space is for, why Colorado, an account of the year, what computing was for, the wrong instrument, the door you can speak to, Hopper's oxen, and play.</p>
+  <div class="stat">ten reflections &middot; 3,693 words &middot; about 16 minutes &middot; dictated 1:42 PM to 8:46 PM</div>
+  <div class="themes">
+    <b>Why now</b> &middot; <a href="2026-07-27/#kairos">II</a>, <a href="2026-07-27/#lineage">VI</a>, <a href="2026-07-27/#hopper">IX</a><br>
+    <b>What it is for, and who</b> &middot; <a href="2026-07-27/#craft">I</a>, <a href="2026-07-27/#third-space">III</a>, <a href="2026-07-27/#play">X</a><br>
+    <b>How it is held</b> &middot; <a href="2026-07-27/#place">IV</a>, <a href="2026-07-27/#orders">VII</a>, <a href="2026-07-27/#interface">VIII</a><br>
+    <b>The account</b> &middot; <a href="2026-07-27/#scope">V</a><br>
+  </div>
+</article>
+
+<footer>
+  <span>The steward's journal &middot; RegenHub, LCA &middot; Boulder, Colorado</span>
+  <span class="note">Nothing here is a governing document of the cooperative, and nothing here has been adopted by anyone. The governing documents live in <a href="https://techne.coop/commons/">the Commonplace Book</a>. These pages are unlisted and carry noindex; they are shared by link, for reading and for correction.</span>
+</footer>
+
+</div>
+<script>
+  (function(){
+    var root=document.documentElement, btn=document.getElementById('modeBtn');
+    function label(){btn.textContent=root.getAttribute('data-mode')==='dark'?'light':'dark';}
+    btn.addEventListener('click',function(){
+      var m=root.getAttribute('data-mode')==='dark'?'light':'dark';
+      root.setAttribute('data-mode',m);
+      try{localStorage.setItem('techne-mode',m);}catch(e){}
+      label();
+    });
+    label();
+  })();
+</script>
+</body>
+</html>
